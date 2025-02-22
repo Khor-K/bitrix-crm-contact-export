@@ -1,0 +1,11 @@
+{
+  "name": "khork/khork.crmentityexport",
+  "description": "Export crm entities",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.1",
+    "phpoffice/phpspreadsheet": "*"
+  }
+}

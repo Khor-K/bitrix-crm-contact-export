@@ -1,0 +1,5 @@
+<?php
+
+$MESS['KHORK_CRMENTITYEXPORT_MODULE_NAME'] = 'CRM Entity Export';
+$MESS['KHORK_CRMENTITYEXPORT_MODULE_DESCRIPTION'] = 'The module enables the export of CRM entities';
+$MESS['KHORK_CRMENTITYEXPORT_MODULE_PARTNER_NAME'] = 'Kirill Khoroshilov';

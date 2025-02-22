@@ -1,6 +1,6 @@
 <?php
 
-namespace includes;
+namespace Khork\CrmEntityExport;
 
 class ComponentModifier
 {
