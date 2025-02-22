@@ -29,7 +29,7 @@ This module allows you to export contacts from Bitrix24 CRM into CSV or XLSX for
     - Go to **CRM** → **Contacts**
 
 2. **Click Export Button**:
-    - Click the **Export Contacts** button in the context menu.
+    - Click the **Export Contacts** button in filter toolbar.
 
 3. **Choose Format**:
     - Select either **CSV** or **XLSX** format in the popup.
