@@ -1,4 +1,4 @@
-# Bitrix24 Contact Exporter Module
+# Bitrix24 CRM Entity Export
 
 This module allows you to export contacts from Bitrix24 CRM into CSV or XLSX formats.
 
@@ -7,11 +7,11 @@ This module allows you to export contacts from Bitrix24 CRM into CSV or XLSX for
 ## Installation
 
 1. **Clone or Download the Module**:
-    - Place the module folder under `/local/modules/khork.exportcontacts/`.
+    - Place the module folder under `/local/modules/khork.crmentityexport/`.
 
 2. **Install the Module**:
     - Go to **Bitrix24 Admin Panel** → **Marketplace** → **Installed Solutions**.
-    - Find the **Contact Exporter** module and click **Install**.
+    - Find the **CRM Entity Export** module and click **Install**.
 
 3. **Install Dependencies**:
     - Run composer install in module folder:
