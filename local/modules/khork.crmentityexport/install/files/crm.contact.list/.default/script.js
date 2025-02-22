@@ -11,7 +11,7 @@ function openContactExportPopup() {
         </div>
     `;
 
-    const popup = BX.UI.Dialogs.MessageBox.show({
+    BX.UI.Dialogs.MessageBox.show({
         title: 'Export Contacts',
         message: html,
         buttons: BX.UI.Dialogs.MessageBoxButtons.OK_CANCEL,
