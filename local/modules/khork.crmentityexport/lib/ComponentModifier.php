@@ -2,14 +2,16 @@
 
 namespace Khork\CrmEntityExport;
 
+use CBitrixComponentTemplate;
+
 class ComponentModifier
 {
-    private \CBitrixComponentTemplate $ob;
+    private CBitrixComponentTemplate $ob;
     private array $arResult;
     private array $arParams;
     private string $localPath;
 
-    public function __construct(\CBitrixComponentTemplate $template, array &$arResult, array &$arParams) {
+    public function __construct(CBitrixComponentTemplate $template, array &$arResult, array &$arParams) {
         $this->ob = $template;
         $this->arResult = &$arResult;
         $this->arParams = &$arParams;
@@ -29,7 +31,7 @@ class ComponentModifier
         $this->ob->IncludeLangFile();
     }
 
-    private function modifyPath() {
+    private function modifyPath() : void {
         $this->getLocalPath();
         $this->ob->__folder = '/bitrix/components' . $this->ob->getComponent()->getRelativePath() . '/templates/' . $this->ob->__name;
         $this->ob->__file = $this->ob->__folder . '/' . $this->ob->__page . '.php';
@@ -37,14 +39,14 @@ class ComponentModifier
         $this->ob->__hasJS = true;
     }
 
-    public function addJs(string $jsPath, bool $isExternal = false) {
+    public function addJs(string $jsPath, bool $isExternal = false) : void {
         if (!$isExternal) {
             $jsPath = $this->getLocalPath() . '/' . $jsPath;
         }
         $this->ob->addExternalJs($jsPath);
     }
 
-    public function addCss(string $cssPath, bool $isExternal = false) {
+    public function addCss(string $cssPath, bool $isExternal = false) : void {
         if (!$isExternal) {
             $cssPath = $this->getLocalPath() . '/' . $cssPath;
         }
@@ -58,7 +60,7 @@ class ComponentModifier
         return $this->localPath;
     }
 
-    private function addEpilog() {
+    private function addEpilog() : void {
         $path = $this->getLocalPath() . '/component_epilog.php';
         if (!file_exists($path)) {
             return;
@@ -70,7 +72,8 @@ class ComponentModifier
         ]);
     }
 
-    public function includeBase()
+    // includes bitrix component's result_modifier.php
+    public function includeBase() : void
     {
         $this->ob->__IncludeMutatorFile($this->arResult, $this->arParams);
     }
